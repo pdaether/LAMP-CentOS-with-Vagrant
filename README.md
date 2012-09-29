@@ -17,6 +17,8 @@ Don't use this VM in a production enviroment.
 
 ## Installation
 
+Befor yout start: 
+I am using a 64 bit version of CentOS as base box. So make sure that you can virtualize a 64 bit system.
 
 Clone this repo
 
@@ -40,6 +42,8 @@ vagrant up
 
 Now, you can reach the webroot with `http://localhost:8080`.
 Also you can find a working installtion of PhpMyAdmin under `http://localhost:8080/phpMyAdmin/`.
+
+The Mysql password for root is emtpy.
 
 To login into the VM type
 ```bash
