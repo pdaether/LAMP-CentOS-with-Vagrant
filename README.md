@@ -2,7 +2,7 @@
 
 ## Overview
 
-I put together this configuration to get up a full LAMP enviroment based on CentOS.
+I put together this configuration to get up a full LAMP environment based on CentOS.
 So you get a CentOS-VM with 
 
 * Apache
@@ -12,12 +12,12 @@ So you get a CentOS-VM with
 * ImageMagick
 
 **Attention:** This is just a quick vagrant based VM for local development and testing.
-Don't use this VM in a production enviroment.
+Don't use this VM in a production environment.
 
 
 ## Installation
 
-Befor yout start: 
+Before you start: 
 I am using a 64 bit version of CentOS as base box. So make sure that you can virtualize a 64 bit system.
 
 Clone this repo
@@ -28,7 +28,7 @@ git clone https://github.com/pdaether/LAMP-CentOS-with-Vagrant.git .
 
 ```
 
-or just download the sourcecode as Zip file.
+or just download the source code as Zip file.
 
 Start the VM:
 
@@ -41,9 +41,9 @@ vagrant up
 ## Usage
 
 Now, you can reach the webroot with `http://localhost:8080`.
-Also you can find a working installtion of PhpMyAdmin under `http://localhost:8080/phpMyAdmin/`.
+Also you can find a working installation of PhpMyAdmin under `http://localhost:8080/phpMyAdmin/`.
 
-The Mysql password for root is emtpy.
+The Mysql password for root is empty.
 
 To login into the VM type
 ```bash
