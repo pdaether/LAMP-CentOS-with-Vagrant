@@ -10,8 +10,9 @@ So you get a CentOS-VM with
 * PHP
 * phpMyAdmin
 * ImageMagick
+* PHP Imagick
 
-**Attention:** This is just a quick vagrant based VM for local development and testing.
+**Attention:** This is just a quick vagrant based VM for some of my local development and testing.
 Don't use this VM in a production environment.
 
 

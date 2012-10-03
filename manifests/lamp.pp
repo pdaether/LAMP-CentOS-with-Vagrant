@@ -38,6 +38,12 @@ class iptables {
 
 class misc {
 
+  exec { "grap-epel":
+    command => "/bin/rpm -Uvh http://download.fedoraproject.org/pub/epel/6/i386/epel-release-6-7.noarch.rpm",
+    creates => "/etc/yum.repos.d/epel.repo",
+    alias   => "grab-epel",
+  }
+
   package { "emacs":
     ensure => present
   }
@@ -234,6 +240,11 @@ class php {
     ensure  => present,
   }
 
+  package { "php-pecl-imagick":
+    ensure  => present,
+    require => Exec["grab-epel"]
+  }
+
 }
 
 class phpmyadmin {
@@ -269,6 +280,8 @@ class phpmyadmin {
 
 }
 
+
+
 class rpmforge {
   exec {
     "/usr/bin/wget http://packages.sw.be/rpmforge-release/rpmforge-release-0.5.2-2.el6.rf.x86_64.rpm":
@@ -295,10 +308,10 @@ class rpmforge {
 
 
 include iptables
+#include rpmforge
 include misc
 include httpd
 include phpdev
 include mysql
 include php
 include phpmyadmin
-# include rpmforge
